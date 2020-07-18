@@ -26,11 +26,19 @@ import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { ImagesComponent } from './images/images.component';
+import { ImageComponent } from './images/image/image.component';
+import { ImageListComponent } from './images/image-list/image-list.component';
+import { AngularFireStorageModule } from "@angular/fire/storage";
 
 
 import { from } from 'rxjs';
 @NgModule({
   declarations: [
+    
+    ImagesComponent,
+    ImageComponent,
+    ImageListComponent,
     AppComponent,
     CustomerComponent,
     CustomerListComponent,
@@ -52,10 +60,11 @@ import { from } from 'rxjs';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AppRoutingModule,
+    AngularFireStorageModule,
     FormsModule,
     AngularFirestoreModule,
   ],
-  providers: [CustomerService ,  AngularFireAuth],
+  providers: [CustomerService ,  AngularFireAuth ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

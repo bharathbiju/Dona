@@ -10,9 +10,13 @@ import { CustomerComponent } from './customer/customer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistrationComponent } from './auth/registration/registration.component';
+import { ImagesComponent } from './images/images.component';
+import { ImageComponent } from './images/image/image.component';
+import { ImageListComponent } from './images/image-list/image-list.component';
+
 
 const routes: Routes = [
-  {path:'organistaion',component:OrganisationComponent},
+  {path:'organistaion',component:ImageComponent},
   {path:'Achivements',component:AchivementComponent},
   {path:'Signup',component:HomeComponent},
 
@@ -30,6 +34,9 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
+  { path: 'organistaion/upload', component: ImageComponent },
+  { path: 'organistaion/list', component: ImageListComponent }
+
   
 
 ];
